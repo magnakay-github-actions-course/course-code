@@ -2,6 +2,18 @@ name: Checkout
 on : [push]
 
 jobs:
+    checkout-action:
+      runs-on: ubuntu-latest
+      steps:
+        - name: List files Before
+          run: ls -a
+        
+        - name: checkout
+          uses: actions/checkout@v4
+
+        - name: List files After
+          run: ls -a
+
     checkout-and-display-files:
         runs-on: ubuntu-latest
         steps:
@@ -19,3 +31,4 @@ jobs:
             
             - name: List Files Checkout
               run: ls -a
+      
