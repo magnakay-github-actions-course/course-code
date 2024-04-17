@@ -3,12 +3,19 @@ on: [push]
 
 jobs:
     run-shell-commands:
-        runs-on: ubuntu-22.04
-        steps:
-            - name: echo a string
-              run: echo "Hello World"
-            
-            - name: Multiline Command
-              run: |
-                node -v 
-                npm -v
+      runs-on: ubuntu-22.04
+      steps:
+        - name: echo a string
+          run: echo "Hello World"
+          
+        - name: Multiline Command
+          run: |
+            node -v 
+            npm -v
+    dependant-job:
+      runs-on: windows-latest
+      steps:
+        - name: echo a string
+          run: Write-Output "Windows String"
+
+        
