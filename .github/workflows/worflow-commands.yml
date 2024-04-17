@@ -9,16 +9,16 @@ jobs:
               run: echo "::error::Missing semicolon"
 
             - name: error
-              run: echo "::error title:Error tittle, file=app.js,line=2, endLine=3, col=5, endColumn=7 ::Missing Semicolon"
+              run: echo "::error title=Error tittle, file=app.js,line=2, endLine=3, col=5, endColumn=7 ::Missing Semicolon"
 
             - name: debug
-              run: echo "::debug title:Debug tittle, file=app.js, line=2, endLine=3, col=5, endColumn=7 ::Missing Semicolon"
+              run: echo "::debug title=Debug tittle, file=app.js, line=2, endLine=3, col=5, endColumn=7 ::Missing Semicolon"
         
             - name: warning
-              run: echo "::warning title:Warning tittle, file=app.js,line=2, endLine=3, col=5, endColumn=7 ::Missing Semicolon"
+              run: echo "::warning title=Warning tittle, file=app.js,line=2, endLine=3, col=5, endColumn=7 ::Missing Semicolon"
 
             - name: notice
-              run: echo "::notice title:Notice tittle, file=app.js,line=2, endLine=3, col=5, endColumn=7 ::Missing Semicolon"
+              run: echo "::notice title=Notice tittle, file=app.js,line=2, endLine=3, col=5, endColumn=7 ::Missing Semicolon"
             
             - name: group
               run: |
@@ -30,4 +30,4 @@ jobs:
               run: echo "::add-mask::Secret String"
             
             - name: secret a value
-              run: echo "secret string"
+              run: echo "::secret::string then something"
