@@ -12,6 +12,16 @@ jobs:
           run: |
             node -v 
             npm -v
+    parallel-job:
+      runs-on: ubuntu-22.04
+      steps:
+        - name: echo a string
+          run: echo "Hello World I'm idependent"
+          
+        - name: Multiline Command
+          run: |
+            node -v 
+            npm -v
     dependant-job:
       runs-on: windows-latest
       needs: run-shell-commands
