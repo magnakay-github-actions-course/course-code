@@ -6,7 +6,7 @@ jobs:
     checkout-test:
         runs-on: ubuntu-latest
         steps:
-            - name: github_sha_development_pr
+            - name: github_sha_development_pr_2
               run: |
                 echo $GITHUB_SHA
                 echo $GITHUB_REF
