@@ -9,6 +9,6 @@ jobs:
             - name: github_sha
               run: |
                 echo $GITHUB_SHA
-                eeho $GITHUB_REF
+                echo $GITHUB_REF
             - uses: actions/checkout@v3
         
